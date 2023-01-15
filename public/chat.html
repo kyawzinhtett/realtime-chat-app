@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div class="chat-container">
+      <!-- Header -->
+      <div class="chat-header">
+        <h1>Realtime Chat App</h1>
+        <a href="index.html">Leave room</a>
+      </div>
+
+      <!-- Main -->
+      <main class="chat-main">
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <h3>Room Name</h3>
+          <p>Room 2</p>
+
+          <h3>Users</h3>
+          <ul>
+            <li>Travis</li>
+            <li>Jesse</li>
+            <li>Emily</li>
+          </ul>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-messages">
+          <div class="message">
+            <p class="meta">Travis <span>10:13 am</span></p>
+            <p class="text">Hello, world!</p>
+          </div>
+          <div class="message">
+            <p class="meta">Jesse <span>10:16 am</span></p>
+            <p class="text">Hello, Travis</p>
+          </div>
+          <div class="message">
+            <p class="meta">Anna <span>11:30 am</span></p>
+            <p class="text">How you doing?</p>
+          </div>
+          <div class="message">
+            <p class="meta">Anna <span>11:30 am</span></p>
+            <p class="text">What's up, guys?</p>
+          </div>
+        </div>
+      </main>
+
+      <!-- Chat Form -->
+      <div class="chat-form">
+        <form>
+          <input
+            type="text"
+            placeholder="Enter message"
+            required
+            autocomplete="off"
+          />
+          <button class="chat-btn">Send</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
