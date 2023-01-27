@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root {
+    --blue-1: #667aff;
+    --blue-2: #5585b5;
+    --blue-3: #53a8b6;
+    --blue-4: #bbe4e9;
+    --blue-5: #a8cdd1;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,7 +31,7 @@ body {
 
 .container {
     width: 35%;
-    background: #bbe4e9;
+    background: var(--blue-4);
     margin: auto;
     margin-top: 100px;
     border-top-left-radius: 5px;
@@ -33,7 +41,7 @@ body {
 .header {
     width: 100%;
     text-align: center;
-    background: #667aff;
+    background: var(--blue-1);
     color: #fff;
     padding: 15px;
     border-top-left-radius: 5px;
@@ -61,7 +69,7 @@ body {
 .btn {
     width: 100%;
     cursor: pointer;
-    background: #5585b5;
+    background: var(--blue-1);
     color: white;
     padding: 14px 20px;
     border: none;
@@ -70,20 +78,20 @@ body {
 }
 
 .btn:hover {
-    background: #53a8b6; 
+    background: var(--blue-2);
 }
 
 /* Chat Page */
 .chat-container {
     max-width: 1100px;
-    background: #bbe4e9;
+    background: var(--blue-4);
     margin: 50px auto;
     overflow: hidden;
 }
 
 .chat-header {
     width: 100%;
-    background: #667aff;
+    background: var(--blue-1);
     color: #fff;
     padding: 15px 20px;
 	display: flex;
@@ -92,14 +100,13 @@ body {
 }
 
 .chat-header a {
-    background: #53a8b6;
+    font-size: 25px;
     color: #fff;
-    padding: 12px 20px;
-    border-radius: 4px;
+    padding: 10px 12px;
 }
 
 .chat-header a:hover {
-    background:#bbe4e9;
+    color: #ccc;
 }
 
 .chat-main {
@@ -114,7 +121,7 @@ body {
 }
 
 .sidebar h3 {
-	background: rgba(0, 0, 0, 0.1);
+	background: var(--blue-5);
 	padding: 10px;
 	margin-bottom: 10px;
 }
@@ -128,24 +135,29 @@ body {
 }
 
 .chat-messages {
-	padding: 30px;
+	padding: 20px;
 	max-height: 400px;
 	overflow-y: scroll;
     background: #fff;
 }
 
+.chat-messages .broadcast-message {
+    padding: 7px;
+    text-align: center;
+    opacity: 0.7;
+}
+
 .chat-messages .message {
 	padding: 10px;
 	margin-bottom: 15px;
-    background: #667aff;
-    color: #fff;
+    background: var(--blue-5);
 	border-radius: 5px;
 }
 
 .chat-messages .message .meta {
 	font-size: 15px;
 	font-weight: bold;
-	opacity: 0.7;
+	opacity: 0.5;
 	margin-bottom: 7px;
 }
 
@@ -155,7 +167,7 @@ body {
 
 .chat-form {
 	padding: 12px 20px;
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--blue-5);
 }
 
 .chat-form form {
@@ -179,13 +191,13 @@ body {
     font-size: 16px;
     cursor: pointer;
 	padding: 12px 20px;
-    background: #5585b5;
+    background: var(--blue-1);
     color: #fff;
 	border: 0;
     border-radius: 4px;
 }
 
 .chat-form .chat-btn:hover {
-    background: #53a8b6; 
+    background: var(--blue-2); 
 }
 

@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b75774c827.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/style.css" />
-    <title>Chat App</title>
+    <title>Realtime Chat App</title>
   </head>
   <body>
     <div class="chat-container">
       <!-- Header -->
       <div class="chat-header">
         <h1>Realtime Chat App</h1>
-        <a href="index.html">Leave room</a>
+        <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i></a>
       </div>
 
       <!-- Main -->
@@ -20,49 +24,40 @@
         <!-- Sidebar -->
         <div class="sidebar">
           <h3>Room Name</h3>
-          <p>Room 2</p>
+          <p id="room-name"></p>
 
           <h3>Users</h3>
-          <ul>
-            <li>Travis</li>
-            <li>Jesse</li>
-            <li>Emily</li>
-          </ul>
+          <ul id="users"></ul>
         </div>
 
         <!-- Chat Messages -->
-        <div class="chat-messages">
-          <div class="message">
-            <p class="meta">Travis <span>10:13 am</span></p>
-            <p class="text">Hello, world!</p>
-          </div>
-          <div class="message">
-            <p class="meta">Jesse <span>10:16 am</span></p>
-            <p class="text">Hello, Travis</p>
-          </div>
-          <div class="message">
-            <p class="meta">Anna <span>11:30 am</span></p>
-            <p class="text">How you doing?</p>
-          </div>
-          <div class="message">
-            <p class="meta">Anna <span>11:30 am</span></p>
-            <p class="text">What's up, guys?</p>
-          </div>
-        </div>
+        <div class="chat-messages"></div>
       </main>
 
       <!-- Chat Form -->
       <div class="chat-form">
-        <form>
+        <form id="form">
           <input
+            id="input"
             type="text"
             placeholder="Enter message"
             required
             autocomplete="off"
           />
-          <button class="chat-btn">Send</button>
+          <button class="chat-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
         </form>
       </div>
     </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.0/qs.min.js"
+      integrity="sha512-/l6vieC+YxaZywUhmqs++8uF9DeMvJE61ua5g+UK0TuHZ4TkTgB1Gm1n0NiA86uEOM9JJ6JUwyR0hboKO0fCng=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
